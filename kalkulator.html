@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>kalkulator sederhana</title>
+</head>
+
+<body>
+	<h2>Kalkulator</h2>
+	<input type="text" id="disp">
+	<br><br>
+	<button value="C" onclick="del()">C</button>
+	<br><button onclick="DP('7')">7</button><button onclick="DP('8')">8</button><button onclick="DP('9')">9</button><button onclick="DP('-')">-</button>
+	<br><button onclick="DP('4')">4</button><button onclick="DP('5')">5</button><button onclick="DP('6')">6</button><button onclick="DP('+')">+</button>
+	<br><button onclick="DP('1')">1</button><button onclick="DP('2')">2</button><button onclick="DP('3')">3</button><button onclick="DP('/')">/</button>
+	<br><button value="=" onclick="PT()">=</button><button onclick="DP('0')">0</button><button onclick="DP('.')">.</button><button onclick="DP('*')">X</button>
+
+	<script>
+		function DP(ank){
+			let dtlama = document.getElementById("disp").value
+			document.getElementById("disp").value = dtlama + ank
+		}
+		function PT(){
+			var hsl = document.getElementById("disp").value
+			document.getElementById("disp").value = eval(hsl);
+		}
+		function del(){
+			document.getElementById("disp").value = "";
+		}
+	</script>
+</body>
+</html>
